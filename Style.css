@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 :root {
@@ -41,9 +41,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(45, 48, 71, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(45, 48, 71, 0.05) 0%, transparent 50%);
     z-index: -1;
     animation: gentleShift 20s ease-in-out infinite alternate;
 }
@@ -91,13 +91,14 @@ header {
 .logo img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    border: 2px solid var(--primary);
+    border: 2px solid transparent;
     transition: var(--transition);
+    filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.5));
 }
 
 .logo:hover img {
-    transform: rotate(5deg) scale(1.05);
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.8));
 }
 
 .logo h1 {
@@ -166,16 +167,16 @@ nav a.active {
     font-weight: 300;
 }
 
-/* Botões principais */
+/* Botões principais - TODOS COM MESMA COR */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: var(--surface);
-    color: var(--text);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
     padding: 12px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: none;
     border-radius: 10px;
     font-size: 0.95rem;
     font-weight: 500;
@@ -184,6 +185,7 @@ nav a.active {
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
 .btn::before {
@@ -193,7 +195,7 @@ nav a.active {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.6s ease;
 }
 
@@ -202,33 +204,18 @@ nav a.active {
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
 }
 
-/* Botões coloridos */
-#newJokeBtn, #getJokeBtn {
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    color: white;
-    border: none;
-}
-
-#favoriteJokeBtn {
-    background: linear-gradient(135deg, var(--success), #34D399);
-    color: white;
-    border: none;
-}
-
-#shareJokeBtn {
-    background: var(--surface-light);
-    color: var(--text);
-}
-
+/* Botão de tradução com cor diferente */
 #translateJokeBtn {
     background: linear-gradient(135deg, #8B5CF6, #A78BFA);
-    color: white;
-    border: none;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+#translateJokeBtn:hover {
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
 }
 
 /* Seção de conteúdo principal */
@@ -247,7 +234,7 @@ nav a.active {
     }
 }
 
-/* Seção de piadas */
+/* Seção de piadas com animação de fundo */
 .joke-section {
     background: var(--surface);
     border-radius: 16px;
@@ -255,6 +242,34 @@ nav a.active {
     margin-bottom: 2rem;
     box-shadow: var(--shadow);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animação de fundo sutil para a seção de piadas */
+.joke-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.02),
+        transparent
+    );
+    animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
 }
 
 .joke-section h2 {
@@ -265,7 +280,7 @@ nav a.active {
 }
 
 .joke-display {
-    background: rgba(15, 23, 42, 0.5);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.6), rgba(30, 41, 59, 0.8));
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;
@@ -273,12 +288,37 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.joke-display:hover {
-    border-color: rgba(255, 255, 255, 0.1);
+/* Efeito de brilho sutil no fundo do joke-display */
+.joke-display::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 107, 53, 0.05) 0%,
+        rgba(0, 180, 216, 0.05) 25%,
+        transparent 70%
+    );
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(180deg);
+    }
 }
 
 .joke-text {
@@ -287,6 +327,8 @@ nav a.active {
     line-height: 1.6;
     text-align: center;
     font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
 
 .joke-actions {
@@ -295,6 +337,8 @@ nav a.active {
     gap: 12px;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 /* Categorias */
@@ -304,6 +348,8 @@ nav a.active {
     gap: 8px;
     justify-content: center;
     margin-top: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .category-btn {
@@ -529,23 +575,46 @@ footer {
     gap: 1rem;
 }
 
+/*ÍCONES SOCIAIS*/
 .social-links a {
     color: var(--text-secondary);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     transition: var(--transition);
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
+    text-decoration: none; 
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.social-links a:hover::before {
+    transform: scale(1);
 }
 
 .social-links a:hover {
-    color: var(--text);
-    background: var(--primary);
-    transform: translateY(-3px);
+    color: white;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
 }
 
 /* Estados de utilidade */

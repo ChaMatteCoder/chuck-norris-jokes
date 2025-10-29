@@ -372,8 +372,6 @@ function simulateTranslation(text) {
     return translated;
 }
 
-// Adicione isso no final do Script.js, antes do event listener de DOMContentLoaded
-
 // Efeitos visuais adicionais
 function addVisualEffects() {
     // Efeito de digitação para a primeira piada
@@ -392,15 +390,12 @@ function typeWriter(element, text, i) {
 
 // Efeito de confete ao favoritar uma piada
 function showConfetti() {
-    // Simulação simples de confete - em um projeto real, use uma biblioteca como canvas-confetti
     jokeTextElement.classList.add('fade-in');
     setTimeout(() => {
         jokeTextElement.classList.remove('fade-in');
     }, 1000);
 }
 
-// Modifique a função addToFavorites para incluir o confete
-// Substitua a função addToFavorites existente por esta:
 function addToFavorites() {
     if (!currentJoke) return;
     
@@ -462,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Chuck Norris Jokes - Carregado com sucesso!');
 });
 
-// Na inicialização, chame a função de efeitos visuais
+// Na inicialização, chame a função de efeitos visuais:
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
     updateStats();
@@ -473,8 +468,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== EVENT LISTENERS =====
 
 // Piadas
-newJokeBtn.addEventListener('click', () => fetchRandomJoke());
-getJokeBtn.addEventListener('click', () => fetchRandomJoke());
+getJokeBtn.addEventListener('click', () => {
+    switchSection('jokes');
+    fetchRandomJoke();
+});
+getJokeBtn.addEventListener('click', () => {
+    switchSection('jokes');
+    fetchRandomJoke();
+});
 favoriteJokeBtn.addEventListener('click', addToFavorites);
 shareJokeBtn.addEventListener('click', shareJoke);
 
