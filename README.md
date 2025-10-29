@@ -4,7 +4,8 @@
 
 > **Projeto Acadêmico** - Disciplina de Tecnologias Web Mobile (2025/02)  
 > **Curso**: Engenharia de Computação  
-> **Autor**: Matheus da Silva Fernandes  
+> **Autor**: Matheus da Silva Fernandes
+> **Professor**: Marcio José da Cunha 
 > **GitHub**: [@ChaMatteCoder](https://github.com/ChaMatteCoder)
 
 ## 📋 Descrição do Projeto
@@ -32,7 +33,6 @@ Site web interativo desenvolvido para consumo da API pública do Chuck Norris, c
 ### 🎨 Interface
 - **Design Moderno**: Interface com gradientes animados e efeitos visuais
 - **Animações Suaves**: Transições e micro-interações
-- **Modo Escuro**: Tema escuro otimizado para visualização
 - **Navegação Intuitiva**: Sistema de abas para organização do conteúdo
 
 ## 🛠 Tecnologias Utilizadas
@@ -58,7 +58,7 @@ chuck-norris-jokes/
 ## 🎮 Como Usar
 
 ### 🖥️ Online
-1. Acesse o site hospedado: [Link do GitHub Pages]
+1. Acesse o site hospedado: [[Link do GitHub Pages](https://chamattecoder.github.io/chuck-norris-jokes)]
 2. Clique em "Obter Piada Aleatória"
 3. Explore as categorias, favoritos e estatísticas
 
@@ -122,16 +122,5 @@ Este projeto foi desenvolvido para fins acadêmicos. A API do Chuck Norris é de
 "Chuck Norris não lê códigos. Ele apenas olha para o computador e espera que ele se comporte." 🤠
 
 </div> ```
-🚀 Deploy no GitHub Pages (Opcional)
-Para hospedar o site gratuitamente:
 
-No repositório no GitHub, vá em Settings
 
-No menu lateral, clique em Pages
-
-Em Branch, selecione main e /root
-
-Clique em Save
-
-Aguarde alguns minutos e seu site estará em:
-https://chamattecoder.github.io/chuck-norris-jokes
