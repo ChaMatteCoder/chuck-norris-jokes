@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://api.chucknorris.io/img/avatar/chuck-norris.png" alt="Chuck Norris">
+                    <h1>Chuck Norris Jokes</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active" data-section="jokes">Piadas</a></li>
+                        <li><a href="#" data-section="favorites">Favoritas</a></li>
+                        <li><a href="#" data-section="stats">Estatísticas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>As piadas mais épicas de Chuck Norris</h2>
+            <p>Descubra por que Chuck Norris não precisa de API, ele simplesmente ordena que as piadas apareçam.</p>
+            <button class="btn" id="getJokeBtn">Obter Piada Aleatória</button>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Seção de Piadas -->
+        <section id="jokes-section" class="content-section">
+            <div class="joke-section">
+                <h2>Piada do Chuck</h2>
+                <div class="joke-display">
+                    <p class="joke-text" id="jokeText">Clique no botão para obter uma piada épica!</p>
+                </div>
+                <div class="joke-actions">
+                    <button class="btn" id="newJokeBtn">Nova Piada</button>
+                    <button class="btn" id="favoriteJokeBtn">Favoritar</button>
+                    <button class="btn" id="shareJokeBtn">Compartilhar</button>
+                    <button class="btn" id="translateJokeBtn">Traduzir PT-BR</button>
+                </div>
+                <div class="categories" id="categoriesList">
+                    <!-- As categorias serão carregadas via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Favoritos -->
+        <section id="favorites-section" class="content-section hidden">
+            <div class="favorites-section">
+                <h2>Suas Piadas Favoritas</h2>
+                <div class="favorites-list" id="favoritesList">
+                    <!-- As piadas favoritas serão carregadas aqui -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Estatísticas -->
+        <section id="stats-section" class="content-section hidden">
+            <div class="stats-section">
+                <h2>Estatísticas de Chuck Norris</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 id="totalJokes">0</h3>
+                        <p>Piadas Visualizadas</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="favoriteCount">0</h3>
+                        <p>Piadas Favoritadas</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="categoriesCount">0</h3>
+                        <p>Categorias Disponíveis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Tradução -->
+    <div id="translationModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Aviso de Tradução</h3>
+            <p>⚠️ Algumas piadas podem perder o sentido humorístico quando traduzidas literalmente do inglês para o português.</p>
+            <p>O humor do Chuck Norris muitas vezes depende de trocadilhos e expressões idiomáticas em inglês.</p>
+            <button class="btn" id="confirmTranslation">Entendi, traduzir mesmo assim</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Chuck Norris Jokes - Todas as piadas são reais, Chuck Norris as aprovou pessoalmente.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/cha_matheus" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/ChaMatteh_" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/ChaMatteCoder" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
