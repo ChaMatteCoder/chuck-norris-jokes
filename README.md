@@ -5,7 +5,7 @@
 > **Projeto Acadêmico** - Disciplina de Tecnologias Web Mobile (2025/02)  
 > **Curso**: Engenharia de Computação  
 > **Autor**: Matheus da Silva Fernandes
-> **Professor**: Marcio José da Cunha 
+> **Professor**: Marcio José da Cunha
 > **GitHub**: [@ChaMatteCoder](https://github.com/ChaMatteCoder)
 
 ## 📋 Descrição do Projeto
@@ -63,64 +63,69 @@ chuck-norris-jokes/
 3. Explore as categorias, favoritos e estatísticas
 
 ### 💻 Localmente
+
 ```bash
 # Clone o repositório
 git clone https://github.com/ChaMatteCoder/chuck-norris-jokes.git
 
 # Abra o arquivo index.html no navegador
-# Ou use um servidor local:
+# Ou use um servidor local (exemplo python):
 python -m http.server 8000
 # Acesse: http://localhost:8000
+```
 
-🔧 Funcionalidades Técnicas
+#### 🔧 Funcionalidades Técnicas
 API Integration
 
+```bash
 // Exemplo de consumo da API
 const response = await fetch('https://api.chucknorris.io/jokes/random');
 const data = await response.json();
+```
 
-Sistema de Favoritos
-Armazenamento local no navegador
+##### Sistema de Favoritos
 
-Persistência entre sessões
+- Armazenamento local no navegador
 
-Interface para gerenciamento
+- Persistência entre sessões
 
-Responsividade
-Mobile-first approach
+- Interface para gerenciamento
 
-Breakpoints para tablets e desktops
+- Responsividade (Mobile-first approach)
 
-Interface adaptativa
+- Breakpoints para tablets e desktops
 
-📚 Aprendizados Desenvolvidos
-Front-end Development: HTML5 semântico, CSS3 avançado, JavaScript moderno
+- Interface adaptativa
 
-APIs REST: Consumo e tratamento de dados externos
+# 📚 Aprendizados Desenvolvidos
 
-Web Storage: Uso de localStorage para persistência
+- Front-end Development: HTML5 semântico, CSS3 avançado, JavaScript moderno
 
-UI/UX Design: Princípios de design responsivo e experiência do usuário
+- APIs REST: Consumo e tratamento de dados externos
 
-Git & GitHub: Versionamento e documentação de projetos
+- Web Storage: Uso de localStorage para persistência
 
-👨‍💻 Autor
+- UI/UX Design: Princípios de design responsivo e experiência do usuário
+
+- Git & GitHub: Versionamento e documentação de projetos
+
+# 👨‍💻 Autor
 Matheus da Silva Fernandes
-🎓 Engenharia de Computação - Disciplina: Tecnologias Web Mobile (2025/02)
+# 🎓 Engenharia de Computação - Disciplina: Tecnologias Web Mobile (2025/02)
 
-🌐 Contatos
-GitHub: ChaMatteCoder
+# 🌐 Contatos
 
-Instagram: @cha_matheus
+- GitHub: ChaMatteCoder
 
-X (Twitter): @ChaMatteh_
+- Instagram: @cha_matheus
 
-📄 Licença
+- X (Twitter): @ChaMatteh_
+
+# 📄 Licença
 Este projeto foi desenvolvido para fins acadêmicos. A API do Chuck Norris é de uso público e gratuito.
 
 <div align="center">
 "Chuck Norris não lê códigos. Ele apenas olha para o computador e espera que ele se comporte." 🤠
-
-</div> ```
+</div>
 
 

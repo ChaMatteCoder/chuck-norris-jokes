@@ -468,6 +468,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== EVENT LISTENERS =====
 
 // Piadas
+
+newJokeBtn.addEventListener('click', function() {
+    console.log('Botão Nova Piada clicado');
+    switchSection('jokes');
+    setTimeout(() => {
+        fetchRandomJoke();
+    }, 100);
+});
+
 getJokeBtn.addEventListener('click', () => {
     switchSection('jokes');
     fetchRandomJoke();
