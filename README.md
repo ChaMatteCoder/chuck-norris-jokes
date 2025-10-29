@@ -4,9 +4,9 @@
 
 > **Projeto Acadêmico** - Disciplina de Tecnologias Web Mobile (2025/02)  
 > **Curso**: Engenharia de Computação  
-> **Autor**: Matheus da Silva Fernandes
+> **Autor**: Matheus da Silva Fernandes  
+> **GitHub**: [@ChaMatteCoder](https://github.com/ChaMatteCoder)  
 > **Professor**: Marcio José da Cunha
-> **GitHub**: [@ChaMatteCoder](https://github.com/ChaMatteCoder)
 
 ## 📋 Descrição do Projeto
 
@@ -48,12 +48,17 @@ Site web interativo desenvolvido para consumo da API pública do Chuck Norris, c
 | **Google Fonts** | Tipografia (Poppins) |
 | **LocalStorage** | Persistência de dados local |
 
-chuck-norris-jokes/
-├── 📄 index.html # Estrutura principal
-├── 🎨 style.css # Estilos e animações
-├── ⚡ script.js # Lógica da aplicação
-├── 📖 README.md # Documentação
+## 📁 Estrutura do Projeto
 
+chuck-norris-jokes/
+
+├── 📄 index.html # Estrutura principal
+
+├── 🎨 style.css # Estilos e animações
+
+├── ⚡ script.js # Lógica da aplicação
+
+└── 📖 README.md # Documentação
 
 ## 🎮 Como Usar
 
@@ -97,7 +102,7 @@ const data = await response.json();
 
 - Interface adaptativa
 
-# 📚 Aprendizados Desenvolvidos
+## 📚 Aprendizados Desenvolvidos
 
 - Front-end Development: HTML5 semântico, CSS3 avançado, JavaScript moderno
 
@@ -109,11 +114,11 @@ const data = await response.json();
 
 - Git & GitHub: Versionamento e documentação de projetos
 
-# 👨‍💻 Autor
-Matheus da Silva Fernandes
-# 🎓 Engenharia de Computação - Disciplina: Tecnologias Web Mobile (2025/02)
+## 👨‍💻 Autor
 
-# 🌐 Contatos
+- Matheus da Silva Fernandes
+  
+## 🌐 Contatos
 
 - GitHub: ChaMatteCoder
 
@@ -121,8 +126,9 @@ Matheus da Silva Fernandes
 
 - X (Twitter): @ChaMatteh_
 
-# 📄 Licença
-Este projeto foi desenvolvido para fins acadêmicos. A API do Chuck Norris é de uso público e gratuito.
+## 📄 Licença
+
+- Este projeto foi desenvolvido para fins acadêmicos. A API do Chuck Norris é de uso público e gratuito.
 
 <div align="center">
 "Chuck Norris não lê códigos. Ele apenas olha para o computador e espera que ele se comporte." 🤠
